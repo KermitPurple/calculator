@@ -1,5 +1,15 @@
+body {
+	background:black;
+	font-size: 50px;
+}
+
 .calc {
 	background: grey;
+	flex-direction: horizontal;
+	width:480px;
+	text-align:center;
+	margin:0 auto;
+	border-radius:15px;
 }
 
 .row {
@@ -10,9 +20,19 @@
 	width:100px;
 	background:white;
 	margin:10px;
+	cursor:pointer;
+	border-radius:15px;
+}
+.button p {
+	margin:0;
+	white-space:0;
+	display: block;
+	margin-top:25%;
 }
 #screen {
 	width:340px;
 	height:100px;
 	margin:10px;
 	background:white;
+	border-radius:15px;
+}
