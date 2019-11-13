@@ -1,0 +1,18 @@
+.calc {
+	background: grey;
+}
+
+.row {
+	display:flex;
+}
+.button {
+	height:100px;
+	width:100px;
+	background:white;
+	margin:10px;
+}
+#screen {
+	width:340px;
+	height:100px;
+	margin:10px;
+	background:white;
