@@ -5,35 +5,35 @@
 	<link href="styles.css" type="text/css" rel="stylesheet">
 </head>
 <body>
-	<script src="script.js"></script>
 	<div class="calc">
 		<div class="row" id="row1">
-			<div id="screen"> </div>
-			<div class="button" id="clear"><p>C</p></div>
+			<div id="screen"><p id="screentext"><p></div>
+			<div class="button" id="clear" onclick="clear();"><p>C</p></div>
 		</div>
+		<script src="script.js"></script>
 		<div class="row" id="row2">
-			<div class="button" id="seven"><p>7</p></div>
-			<div class="button" id="eight"><p>8</p></div>
-			<div class="button" id="nine"><p>9</p></div>
-			<div class="button"id="divide"><p>/</p></div>
+			<div class="button" id="seven" onclick="addnum(7);"><p>7</p></div>
+			<div class="button" id="eight" onclick="addnum(8);"><p>8</p></div>
+			<div class="button" id="nine" onclick="addnum(9);"><p>9</p></div>
+			<div class="button"id="divide" onclick="addop('/');"><p>/</p></div>
 		</div>
 		<div class="row" id="row3">
-			<div class="button" id="four"><p>4</p></div>
-			<div class="button" id="five"><p>5</p></div>
-			<div class="button" id="six"><p>6</p></div>
-			<div class="button" id="multipy"><p>*</p></div>
+			<div class="button" id="four" onclick="addnum(4);"><p>4</p></div>
+			<div class="button" id="five" onclick="addnum(5);"><p>5</p></div>
+			<div class="button" id="six" onclick="addnum(6);"><p>6</p></div>
+			<div class="button" id="multipy" onclick="addop('*');"><p>*</p></div>
 		</div>
 		<div class="row" id="row4">
-			<div class="button" id="one"><p>1</p></div>
-			<div class="button" id="two"><p>2</p></div>
-			<div class="button" id="three"><p>3</p></div>
-			<div class="button" id="minus"><p>-</p></div>
+			<div class="button" id="one" onclick="addnum(1);"><p>1</p></div>
+			<div class="button" id="two" onclick="addnum(2);"><p>2</p></div>
+			<div class="button" id="three" onclick="addnum(3);"><p>3</p></div>
+			<div class="button" id="minus" onclick="addop('-');"><p>-</p></div>
 		</div>
 		<div class="row" id="row5">
-			<div class="button" id="zero"><p>0</p></div>
-			<div class="button" id="decimal"><p>.</p></div>
-			<div class="button" id="equals"><p>=</p></div>
-			<div class="button" id="add"><p>+</p></div>
+			<div class="button" id="zero" onclick="addnum(0);"><p>0</p></div>
+			<div class="button" id="decimal" onclick="decimal();"><p>.</p></div>
+			<div class="button" id="equals" onclick="calculate();"><p>=</p></div>
+			<div class="button" id="add" onclick="addop('+');"><p>+</p></div>
 		</div>
 	</div>
 </body>

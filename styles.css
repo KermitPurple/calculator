@@ -35,7 +35,15 @@ body {
 	margin:10px;
 	background:white;
 	border-radius:15px;
+	text-align: right;
+	overflow: hidden;
 }
+
+#screentext {
+	margin: 35px;
+	font-size: 30px;
+}
+
 #equals, #clear {
 	background: orange;
 	color: white;
