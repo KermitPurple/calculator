@@ -27,7 +27,7 @@ body {
 	margin:0;
 	white-space:0;
 	display: block;
-	margin-top:25%;
+	margin-top:23%;
 }
 #screen {
 	width:340px;
@@ -36,3 +36,8 @@ body {
 	background:white;
 	border-radius:15px;
 }
+#equals, #clear {
+	background: orange;
+	color: white;
+}
+
