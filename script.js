@@ -6,9 +6,9 @@ let counter = 0; //This keeps track of what sub the op and num array should be
 let resneed = false;
 let dec = false;
 
-window.onload = clear();
+window.onload = cleararr();
 
-function clear()
+function cleararr()
 {
 	document.getElementById("screentext").innerHTML = "0";
 	for(let i = 0; i < Size; i++)// set every item in op array to null and in num array to 0
@@ -19,7 +19,7 @@ function clear()
 	counter = 0;
 	console.log("CLEAR");
 	dec = false;
-}//clear
+}//cleararr
 
 function addnum(n)//it adds n to the end of a string
 {
@@ -74,7 +74,7 @@ function calculate()
 			}// if /
 		}//if blank
 	}//for i
-	clear();
+	cleararr();
 	num[0] = total;
 	resneed = true;
 	console.log(total);
