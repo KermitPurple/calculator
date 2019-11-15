@@ -5,6 +5,7 @@ let op = new Array(Size);
 let counter = 0; //This keeps track of what sub the op and num array should be
 let resneed = false;
 let dec = false;
+let decounter = 0;
 
 window.onload = cleararr();
 
@@ -19,6 +20,7 @@ function cleararr()
 	counter = 0;
 	console.log("CLEAR");
 	dec = false;
+	decounter = 0;
 }//cleararr
 
 function addnum(n)//it adds n to the end of a string
@@ -26,15 +28,16 @@ function addnum(n)//it adds n to the end of a string
 	if(resneed)
 	{
 		resneed = false;
-		num[counter] = 0;
+		num[counter] = null;
 	}//if resneed
-	if(num[counter==null])
+	if(num[counter] == null)
 	{
 		num[counter] = 0;
 	}
 	if(dec)
 	{
-		num[counter] = num[counter] + n/10;
+		num[counter] = num[counter] + (n / Math.pow(10, decounter + 1));
+		decounter++;
 	}//if dec
 	else
 		num[counter] = num[counter] * 10 + n;
@@ -47,6 +50,7 @@ function addop(o)//sets the operator to o and increments the counters
 	document.getElementById("screentext").innerHTML = op[counter];
 	counter++;
 	dec = false;
+	decounter = 0;
 }//addop
 
 function calculate()
@@ -84,9 +88,12 @@ function calculate()
 
 function decimal()
 {
-	dec=true;
-	document.getElementById("screentext").innerHTML = num[counter] + ".";
-	console.log("test");
+	if(!dec)
+	{
+		dec=true;
+		document.getElementById("screentext").innerHTML = num[counter] + ".";
+		console.log("test");
+	}//if !dec
 }//decimal
 
 document.addEventListener('keydown', function(event)//read keyboard input
@@ -110,4 +117,7 @@ document.addEventListener('keydown', function(event)//read keyboard input
 		calculate();
 	else if(event.which == 8 || event.key == "c" || event.key == "C"|| event.which == 27)
 		cleararr();
+	else if(event.key == ".")
+		decimal();
+
 });
