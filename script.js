@@ -88,3 +88,26 @@ function decimal()
 	document.getElementById("screentext").innerHTML = num[counter] + ".";
 	console.log("test");
 }//decimal
+
+document.addEventListener('keydown', function(event)//read keyboard input
+{
+	for ( let i = 48; i <= 57; i++)//checks if input is number
+	{
+		if(event.which == i && event.key != "*")
+		{
+			addnum(i-48);
+		}//if 
+	}//for i
+	if(event.key == '*' || event.which == 88)
+		addop("*");
+	else if(event.key == "+")
+		addop("+");
+	else if(event.key == "-")
+		addop("-");
+	else if(event.which == 191 || event.key == 'd')
+		addop('/');
+	else if(event.which == 13 || event.key =="=")
+		calculate();
+	else if(event.which == 8 || event.key == "c" || event.key == "C"|| event.which == 27)
+		cleararr();
+});
