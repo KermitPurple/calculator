@@ -92,7 +92,6 @@ function decimal()
 	{
 		dec=true;
 		document.getElementById("screentext").innerHTML = num[counter] + ".";
-		console.log("test");
 	}//if !dec
 }//decimal
 
