@@ -41,7 +41,7 @@ function addnum(n)//it adds n to the end of a string
 	}//if dec
 	else
 		num[counter] = num[counter] * 10 + n;
-	document.getElementById("screentext").innerHTML = num[counter];
+	document.getElementById("screentext").innerHTML = num[counter].toFixed(decounter);
 }//addnum
 
 function addop(o)//sets the operator to o and increments the counters
