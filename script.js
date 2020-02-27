@@ -91,6 +91,9 @@ function decimal()
 	if(!dec)
 	{
 		dec=true;
+		if(num[counter] == null){
+			num[counter] = 0;
+		}
 		document.getElementById("screentext").innerHTML = num[counter] + ".";
 	}//if !dec
 }//decimal
