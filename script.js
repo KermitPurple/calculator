@@ -6,6 +6,7 @@ let counter = 0; //This keeps track of what sub the op and num array should be
 let resneed = false;
 let dec = false;
 let decounter = 0;
+let didgets = 0;
 
 window.onload = cleararr();
 
@@ -25,6 +26,7 @@ function cleararr()
     console.log("CLEAR");
     dec = false;
     decounter = 0;
+    digits = 0;
 }//cleararr
 
 function addnum(n)//it adds n to the end of a string
@@ -33,7 +35,12 @@ function addnum(n)//it adds n to the end of a string
     {
         resneed = false;
         num[counter] = null;
+        digits = 0
     }//if resneed
+    digits += 1
+    if (digits > 18){
+        return;
+    }
     if(num[counter] == null)
     {
         num[counter] = 0;
@@ -45,7 +52,7 @@ function addnum(n)//it adds n to the end of a string
     }//if dec
     else
         num[counter] = num[counter] * 10 + n;
-    document.getElementById("screentext").innerHTML = round(num[counter]);
+    document.getElementById("screentext").innerHTML = round(num[counter]).toFixed(decounter);
 }//addnum
 
 function addop(o)//sets the operator to o and increments the counters
@@ -55,6 +62,7 @@ function addop(o)//sets the operator to o and increments the counters
     counter++;
     dec = false;
     decounter = 0;
+    digits = 0
 }//addop
 
 function calculate()
